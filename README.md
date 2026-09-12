@@ -75,6 +75,8 @@ npm run preview    # preview the production build locally
 
 ## Regenerating the data
 
+In case the database contains incorrect values, the table needs to be updated.
+
 `src/data.ts` is a one-time extraction from `bb_armor.xlsm`'s Hats/Shirts/Gloves/Pants sheets. If
 the source workbook changes, regenerate the file rather than hand-editing stat values — see the
 extraction approach described in `PORTING_NOTES.md`.
