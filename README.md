@@ -85,5 +85,17 @@ product of its own, keeping monetization off the table for *this specific deploy
 more conservative choice — nothing stops you from reusing the AGPL-licensed code elsewhere in a
 context where that concern doesn't apply.
 
-The `LICENSE` file currently contains a placeholder — see the note at the top of that file for
-how to drop in the full official license text before you publish.
+```
+Attire Ledger
+
+Copyright (C) 2026 [Otto Palmgren]
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as
+published by the Free Software Foundation, either version 3 of the
+License (AGPL-3.0-only).
+
+This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+```
