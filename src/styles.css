@@ -431,6 +431,7 @@ footer.note {
 .seo-content {
   padding-top: 1rem;
   padding-bottom: 4rem;
+  text-align: center;
 }
 
 .seo-content h2 {
@@ -443,7 +444,7 @@ footer.note {
 }
 
 .seo-content p {
-  max-width: 48rem;
+  /*max-width: 48rem;*/
   margin: 0;
   color: var(--ink-dim);
 }
