@@ -1,0 +1,23 @@
+Attire Ledger
+
+Copyright (C) 2026 [Otto Palmgren]
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as
+published by the Free Software Foundation, either version 3 of the
+License (AGPL-3.0-only).
+
+This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+---
+
+NOTE: This file is a placeholder. For GitHub to correctly detect and
+display the license on the repo, replace everything below this line
+with the full, official AGPL-3.0 text before you commit:
+
+  https://www.gnu.org/licenses/agpl-3.0.txt
+
+The easiest way: copy it straight from your pricecharting-search repo
+(same license), or download it from the link above and paste it in.
