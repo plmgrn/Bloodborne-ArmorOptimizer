@@ -1,4 +1,8 @@
-# The Attire Ledger
+
+
+# [The Attire Ledger↗](https://plmgrn.github.io/Bloodborne-ArmorOptimizer/)
+
+**You can find the page [here](https://plmgrn.github.io/Bloodborne-ArmorOptimizer/)**
 
 A small browser tool that finds the best Bloodborne armor combination (Hat + Garb + Gloves +
 Trousers) for a chosen resistance stat — ported from an Excel/VBA optimizer
@@ -51,17 +55,6 @@ npm run test:watch
 npm run build      # type-check + production build to dist/
 npm run preview    # preview the production build locally
 ```
-
-## Deploying to GitHub Pages
-
-This repo is set up for the **GitHub Actions** deployment method:
-
-1. In the repo's Settings → Pages, set **Source** to "GitHub Actions".
-2. Push to `main`. The workflow in `.github/workflows/deploy.yml` installs dependencies, runs the
-   test suite, builds, and deploys `dist/` automatically.
-
-`vite.config.ts` uses `base: './'` (relative asset paths), so it works on a project page
-(`https://<user>.github.io/<repo>/`) without needing the repo name hardcoded anywhere.
 
 ## Regenerating the data
 
