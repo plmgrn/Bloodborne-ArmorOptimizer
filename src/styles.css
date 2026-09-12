@@ -49,6 +49,36 @@ button {
 
 /* ---------- Layout ---------- */
 
+.site-intro,
+.seo-content {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+}
+
+.site-intro {
+  padding-top: 2.5rem;
+  padding-bottom: 0;
+}
+
+.site-intro h1 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-style: italic;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  margin: 0 0 0.35rem;
+  color: var(--ink);
+  letter-spacing: 0.01em;
+}
+
+.site-intro p {
+  max-width: 46rem;
+  margin: 0;
+  color: var(--ink-dim);
+  font-size: 0.95rem;
+}
+
 #app {
   max-width: 1180px;
   margin: 0 auto;
@@ -61,7 +91,7 @@ button {
   margin-bottom: 2.25rem;
 }
 
-.masthead h1 {
+.masthead h2 {
   font-family: var(--font-display);
   font-weight: 600;
   font-style: italic;
@@ -396,4 +426,37 @@ footer.note {
   font-size: 0.8rem;
   border-top: 1px solid var(--line);
   padding-top: 1rem;
+}
+
+.seo-content {
+  padding-top: 1rem;
+  padding-bottom: 4rem;
+}
+
+.seo-content h2 {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.55rem;
+  margin: 2.5rem 0 0.5rem;
+  color: var(--brass);
+}
+
+.seo-content p {
+  max-width: 48rem;
+  margin: 0;
+  color: var(--ink-dim);
+}
+
+@media (max-width: 600px) {
+  .site-intro,
+  .seo-content,
+  #app {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .site-intro {
+    padding-top: 1.5rem;
+  }
 }

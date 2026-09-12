@@ -4,8 +4,8 @@
 
 **You can find the page [here](https://plmgrn.github.io/Bloodborne-ArmorOptimizer/)**
 
-A small browser tool that finds the best Bloodborne armor combination (Hat + Garb + Gloves +
-Trousers) for a chosen resistance stat — ported from an Excel/VBA optimizer
+**Bloodborne Armor Optimizer** is a browser tool that finds the best Bloodborne armor combination
+(Hat + Garb + Gloves + Trousers) for a chosen resistance stat, ported from an Excel/VBA optimizer
 (`ModOptimizer.bas` + `bb_armor.xlsm`, kept in this repo for reference).
 
 > **Fan-made project.** Not affiliated with, endorsed by, or sponsored by Sony Interactive
@@ -26,14 +26,31 @@ See `PORTING_NOTES.md` for exactly how each piece of the original VBA maps to th
 
 ## Background
 
-I created an spreadsheet with all the attire in the game on my first full Bloodborne playthrough. I had thought that there might be a possiblity of optimizing your armor, but from this calculator it would seem like there is a single BiS combination of attire, that is mathematically correct.
+I created a spreadsheet with all the attire in the game during my first full Bloodborne playthrough.
+I wondered whether armor could be optimized, and this calculator tests that question by searching
+the complete combination space rather than relying on a single preselected armor set.
 
-The reason this project is alive and deployed is for a rare scenario of wanting the best attire for one resist type. (Which would not make sense as all the bosses in the game do pretty much the same damage, which is best countered by the BiS combination)
+The project is useful when you want the best attire for one resistance type while still seeing the
+trade-off against a broader weighted total.
+
+## Features
+
+- Optimize Bloodborne armor for Physical resistance
+- Optimize for Fire resistance
+- Optimize for Bolt resistance
+- Optimize for Arcane resistance
+- Compare overall resistance trade-offs
+- Find the mathematically optimal four-piece attire combination
+- Runs entirely in the browser
+- No account or backend required
 
 ## Project structure
 
 ```
 index.html
+public/
+  robots.txt             # crawler access rules + sitemap location
+  sitemap.xml            # sitemap for the deployed project page
 src/
   data.ts             # static item data + types, extracted from bb_armor.xlsm
   calculations.ts      # pure calculation engine (ported from ModOptimizer.bas)

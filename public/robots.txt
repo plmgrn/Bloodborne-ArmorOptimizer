@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://plmgrn.github.io/Bloodborne-ArmorOptimizer/sitemap.xml

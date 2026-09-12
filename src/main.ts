@@ -19,7 +19,7 @@ if (!app) throw new Error('#app root not found');
 
 app.innerHTML = `
   <header class="masthead">
-    <h1>The Attire Ledger</h1>
+    <h2>The Attire Ledger</h2>
     <p>
       Choose the resistance you care most about and the ledger searches every Hat, Garb, Glove and
       Trouser combination to find the strongest set for it — then a second set that trades a little
@@ -39,7 +39,7 @@ app.innerHTML = `
       </div>
       <div class="field">
         <label for="tolerance">Tolerance for the second set (%)</label>
-        <input type="number" id="tolerance" step="1" />
+        <input type="number" id="tolerance" min="0" max="100" step="1" />
       </div>
       <button type="button" class="weights-toggle" id="weights-toggle" aria-expanded="false">
         Adjust stat weights
@@ -48,7 +48,7 @@ app.innerHTML = `
       <button type="button" class="run-button" id="run-button">Find the best attire</button>
     </aside>
     <main>
-      <div id="results">
+      <div id="results" aria-live="polite">
         <div class="results-empty">The ledger is blank. Set your terms and find the best attire.</div>
       </div>
     </main>
@@ -154,7 +154,7 @@ function renderCombo(combo: ComboTotals, primaryStat: StatName): string {
   `;
 }
 
-function render(result: OptimizeResult, primaryStat: StatName, primaryLabel: string, tiebreakerLabel: string) {
+function render(result: OptimizeResult, primaryStat: StatName, primaryLabel: string) {
   const { scenarioA, scenarioB, comparison, threshold, scenarioBMetThreshold } = result;
 
   resultsEl.innerHTML = `
@@ -197,7 +197,7 @@ function render(result: OptimizeResult, primaryStat: StatName, primaryLabel: str
         comparison.tradeRatio !== undefined
           ? `<div class="comparison-stat">
                <div class="label">Trade ratio</div>
-               <div class="value">${comparison.tradeRatio.toFixed(1)} total per 1 ${tiebreakerLabel === primaryLabel ? '' : ''}${primaryLabel}</div>
+               <div class="value">${comparison.tradeRatio.toFixed(1)} total per 1 ${primaryLabel}</div>
              </div>`
           : ''
       }
@@ -212,7 +212,7 @@ function runOptimization() {
   const weights = readWeights();
 
   const result = optimize(armorData, SLOT_ORDER, primaryStat, tiebreakerStat, tolerancePct, weights);
-  render(result, primaryStat, STAT_LABELS[primaryStat], STAT_LABELS[tiebreakerStat]);
+  render(result, primaryStat, STAT_LABELS[primaryStat]);
 }
 
 runButton.addEventListener('click', runOptimization);

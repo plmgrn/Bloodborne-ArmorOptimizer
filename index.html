@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Attire Ledger — Bloodborne Armor Optimizer</title>
-    <meta name="description" content="Find the strongest attire combination for a chosen resistance, and see what it costs to trade for it." />
+    <meta
+      name="description"
+      content="Bloodborne armor optimizer and calculator. Find the best armor combination for Fire, Bolt, Arcane, Physical and other resistances."
+    />
+    <link rel="canonical" href="https://plmgrn.github.io/Bloodborne-ArmorOptimizer/" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,9 +16,68 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/src/styles.css" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Bloodborne Armor Optimizer" />
+    <meta
+      property="og:description"
+      content="Find the best Bloodborne armor combination for any resistance."
+    />
+    <meta property="og:url" content="https://plmgrn.github.io/Bloodborne-ArmorOptimizer/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Bloodborne Armor Optimizer" />
+    <meta
+      name="twitter:description"
+      content="Find the best Bloodborne armor combination for any resistance."
+    />
   </head>
   <body>
+    <header class="site-intro">
+      <h1>Bloodborne Armor Optimizer</h1>
+      <p>
+        Find the best combination of Hat, Garb, Gloves and Trousers for a chosen Bloodborne
+        resistance. Attire Ledger compares every four-piece combination in the browser.
+      </p>
+    </header>
+
     <div id="app"></div>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Bloodborne Armor Optimizer",
+        "applicationCategory": "GameApplication",
+        "operatingSystem": "Web",
+        "description": "A browser-based calculator for finding optimal Bloodborne armor combinations based on resistance priorities.",
+        "url": "https://plmgrn.github.io/Bloodborne-ArmorOptimizer/"
+      }
+    </script>
     <script type="module" src="/src/main.ts"></script>
+
+    <section class="seo-content" aria-labelledby="about-heading">
+      <h2 id="about-heading">Find the Best Bloodborne Armor</h2>
+      <p>
+        This Bloodborne armor calculator searches the complete four-slot attire space to find a
+        strong set for Physical, Blunt, Thrust, Blood, Arcane, Fire, Bolt, poison, Frenzy or
+        Beasthood resistance. Choose the stat that matters most, set a tiebreaker and decide how
+        much of the primary resistance you are willing to trade for a better overall total.
+      </p>
+
+      <h2>How the Armor Optimizer Works</h2>
+      <p>
+        Scenario A maximizes the selected primary resistance. Scenario B finds the highest
+        weighted total among combinations that remain within your tolerance of Scenario A. The
+        optimizer evaluates 125 attire pieces across every Hat, Garb, Glove and Trouser
+        combination, using the same calculation model as the original Excel/VBA ledger.
+      </p>
+
+      <h2>Bloodborne Resistance Calculator</h2>
+      <p>
+        The tool runs entirely in your browser, with no account or backend required. Results show
+        each selected item, the primary resistance total, the tiebreaker, the weighted total and
+        the trade between the two recommended sets. For a different priority, change the controls
+        and run the optimizer again.
+      </p>
+    </section>
   </body>
 </html>
